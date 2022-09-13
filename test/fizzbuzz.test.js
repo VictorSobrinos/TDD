@@ -3,14 +3,14 @@ import { describe, expect, it } from 'vitest'
 const fizzbuzz = (number) => {
     if (typeof number !== 'number') throw new Error('Parameter provided must be a number')
     if (Number.isNaN(number)) throw new Error('Parameter provided must be a number')
-    return number
+    return 0
 }
 
 describe('fizzbuzz', () => {
     it('Should be a function', () => {
         expect(typeof fizzbuzz).toBe('function')
     })
-    it('Should throw if not number is provided as parameter', () => {
+    it('Should throw an error if not number is provided as parameter', () => {
         expect(() => fizzbuzz().toThrow())
     })
     it('Should throw a specific error message if not number is provided as parameter', () => {
